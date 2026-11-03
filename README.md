@@ -258,7 +258,7 @@ After editing `rules.json` or the samples, run `python scripts/build_web.py` to 
 ## Author
 
 **Nived NS** – IT Support Executive, Kozhikode, Kerala
-LinkedIn: [linkedin.com/in/your-profile](https://www.linkedin.com/in/your-profile)
+LinkedIn: [linkedin.com/in/nivedns](https://www.linkedin.com/in/nivedns)
 
 ## License
 
