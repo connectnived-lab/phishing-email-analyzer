@@ -1,0 +1,45 @@
+Return-Path: <bounce@mailer-kyc.top>
+Received: from mx.example-recipient.in (mx.example-recipient.in [203.0.113.10]) by inbox.example-recipient.in with ESMTPS id 9F1C2; Mon, 2 Nov 2026 09:14:07 +0530
+Received: from sbi-kyc-verify.xyz (unknown [185.234.72.19]) by mx.example-recipient.in with SMTP id 77AB1; Mon, 2 Nov 2026 09:14:05 +0530
+Authentication-Results: mx.example-recipient.in; spf=fail smtp.mailfrom=mailer-kyc.top; dkim=none; dmarc=fail header.from=sbi-kyc-verify.xyz
+From: "SBI Alerts" <alerts@sbi-kyc-verify.xyz>
+Reply-To: sbi.helpdesk.kyc@gmail.com
+To: customer@example-recipient.in
+Subject: URGENT: Your SBI account will be blocked today - KYC update pending
+Date: Mon, 2 Nov 2026 09:13:58 +0530
+Message-ID: <20261102091358.4471@mailer-kyc.top>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="==alt_7f3a9c=="
+
+--==alt_7f3a9c==
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Dear Customer,
+
+Your SBI YONO account will be blocked within 24 hours because your KYC is pending.
+Update your KYC immediately to avoid suspension of net banking.
+
+Click here: https://www.onlinesbi.sbi
+
+You will need your PAN card number and the OTP sent to your mobile.
+
+Regards,
+State Bank of India
+
+--==alt_7f3a9c==
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><body style=3D"font-family:Arial">
+<p>Dear Customer,</p>
+<p>Your <b>SBI YONO</b> account will be blocked within 24 hours because you=
+r <b>KYC is pending</b>.
+Update your KYC immediately to avoid suspension of net banking.</p>
+<p><a href=3D"http://onlinesbi-kyc.top/login/update.php?id=3D88213">https:/=
+/www.onlinesbi.sbi</a></p>
+<p>You will need your PAN card number and enter your OTP on the next page.<=
+/p>
+<p>Regards,<br>State Bank of India</p>
+</body></html>
+--==alt_7f3a9c==--

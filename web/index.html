@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PhishCheck – Phishing Email Analyzer</title>
+  <meta name="description" content="Paste a raw email or upload a .eml file and get a phishing risk score with plain-English reasons. Runs entirely in your browser.">
+  <meta property="og:title" content="PhishCheck – Phishing Email Analyzer">
+  <meta property="og:description" content="Risk score 0–100 with clear reasons: spoofed senders, fake links, scam wording, dangerous attachments. Nothing leaves your browser.">
+  <meta property="og:type" content="website">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d4ed8'/%3E%3Cpath d='M14 22h36v22H14z' fill='none' stroke='white' stroke-width='4'/%3E%3Cpath d='M14 22l18 13 18-13' fill='none' stroke='white' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css?v=1">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="brand">
+        <svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14"/><path d="M14 22h36v22H14z"/><path d="M14 22l18 13 18-13"/></svg>
+        <div>
+          <h1>PhishCheck</h1>
+          <p>Phishing Email Analyzer</p>
+        </div>
+      </div>
+      <span class="privacy-pill" title="All analysis runs in JavaScript on this page. No network requests are made with your email.">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3z"/></svg>
+        Runs in your browser · nothing is uploaded
+      </span>
+    </div>
+  </header>
+
+  <main class="wrap grid">
+    <section class="card input-card" aria-labelledby="input-title">
+      <div class="card-head">
+        <h2 id="input-title">Email to check</h2>
+        <div class="head-actions">
+          <label class="btn btn-ghost" for="file-input">Upload .eml</label>
+          <input id="file-input" type="file" accept=".eml,.txt,message/rfc822" hidden>
+          <button class="btn btn-ghost" id="clear-btn" type="button">Clear</button>
+        </div>
+      </div>
+      <textarea id="email-input" spellcheck="false" placeholder="Paste the full original email here, including headers.
+
+Gmail: open the email, ⋮ menu, Show original, Copy to clipboard.
+Outlook: File, Properties, Internet headers (or save the message as .eml and upload it).
+
+You can also drop a .eml file onto this box."></textarea>
+      <button class="btn btn-primary" id="analyze-btn" type="button">Analyze email</button>
+
+      <div class="samples">
+        <p class="samples-title">Try a sample</p>
+        <div class="sample-group">
+          <span class="sample-label bad">Phishing</span>
+          <div class="chips" id="samples-phishing"></div>
+        </div>
+        <div class="sample-group">
+          <span class="sample-label good">Legitimate</span>
+          <div class="chips" id="samples-legit"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card result-card" aria-live="polite" aria-labelledby="result-title">
+      <h2 id="result-title" class="visually-hidden">Result</h2>
+      <div id="empty-state" class="empty">
+        <svg viewBox="0 0 120 80" aria-hidden="true"><rect x="10" y="10" width="100" height="60" rx="8"/><path d="M10 18l50 32 50-32"/></svg>
+        <p>Paste an email or pick a sample to see its risk score.</p>
+      </div>
+
+      <div id="result" hidden>
+        <div class="score-row">
+          <div class="gauge" id="gauge">
+            <svg viewBox="0 0 200 116" aria-hidden="true">
+              <path class="gauge-track" d="M20 100 A80 80 0 0 1 180 100"/>
+              <path class="gauge-fill" id="gauge-fill" d="M20 100 A80 80 0 0 1 180 100"/>
+            </svg>
+            <div class="gauge-text">
+              <span class="gauge-score" id="score">0</span>
+              <span class="gauge-max">/ 100</span>
+            </div>
+          </div>
+          <div class="verdict-box">
+            <span class="verdict" id="verdict">Safe</span>
+            <p class="verdict-note" id="verdict-note"></p>
+            <div class="scale">
+              <span class="seg safe">0–29 Safe</span>
+              <span class="seg susp">30–59 Suspicious</span>
+              <span class="seg phish">60–100 Phishing</span>
+            </div>
+          </div>
+        </div>
+
+        <dl class="facts" id="facts"></dl>
+
+        <div class="findings-head">
+          <h3>Why this score</h3>
+          <span class="count" id="finding-count"></span>
+        </div>
+        <ol class="findings" id="findings"></ol>
+      </div>
+    </section>
+  </main>
+
+  <section class="wrap how card">
+    <h2>How the score works</h2>
+    <div class="how-grid">
+      <div><h3>Sender</h3><p>Reply-To and Return-Path pointing elsewhere, brand names in the sender name, look-alike sender domains, failed SPF / DKIM / DMARC.</p></div>
+      <div><h3>Links</h3><p>Link text that shows one address but opens another, IP-address links, URL shorteners, punycode and look-alike brand domains, risky domain endings, @ tricks.</p></div>
+      <div><h3>Wording</h3><p>Urgency and threats, requests for passwords / OTP / card details, KYC and blocked-account scams, lottery and prize lures.</p></div>
+      <div><h3>Attachments</h3><p>Programs and scripts (.exe, .js, .iso …), disguised double extensions, macro-enabled Office files, HTML login pages, archives.</p></div>
+    </div>
+    <p class="how-note">Each warning adds points. The total (capped at 100) gives the verdict. This is a teaching and triage aid: a low score does not prove an email is safe, so when in doubt, ask your IT team.</p>
+  </section>
+
+  <footer class="wrap footer">
+    <span>Built by Nived NS · MIT licence</span>
+    <span id="repo-link"></span>
+  </footer>
+
+  <script src="js/rules.js?v=1"></script>
+  <script src="js/samples.js?v=1"></script>
+  <script src="js/analyzer.js?v=1"></script>
+  <script src="js/app.js?v=1"></script>
+</body>
+</html>

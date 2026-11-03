@@ -1,0 +1,30 @@
+Return-Path: <arun.k@contoso-retail.in>
+Received: from mail.contoso-retail.in (mail.contoso-retail.in [198.51.100.20]) by mx.contoso-retail.in; Tue, 3 Nov 2026 09:45:00 +0530
+Authentication-Results: mx.contoso-retail.in; spf=pass smtp.mailfrom=contoso-retail.in; dkim=pass header.d=contoso-retail.in; dmarc=pass header.from=contoso-retail.in
+From: "Arun K" <arun.k@contoso-retail.in>
+To: it.support@contoso-retail.in
+Subject: POS printer replacement - agenda for Thursday
+Date: Tue, 3 Nov 2026 09:44:52 +0530
+Message-ID: <CAF7=meet.993@contoso-retail.in>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="==mix_42b1d0=="
+
+--==mix_42b1d0==
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Hi Nived,
+
+Sharing the agenda for Thursday's meeting about replacing the receipt printers on the ground-floor tills.
+I have attached the vendor quotation as a PDF. Let me know if 11 am works for you.
+
+Thanks,
+Arun
+
+--==mix_42b1d0==
+Content-Type: application/pdf; name="POS_Printer_Quotation.pdf"
+Content-Disposition: attachment; filename="POS_Printer_Quotation.pdf"
+Content-Transfer-Encoding: base64
+
+JVBERi0xLjQKJSBxdW90YXRpb24gcGxhY2Vob2xkZXIKJSVFT0YK
+--==mix_42b1d0==--

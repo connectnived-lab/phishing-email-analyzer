@@ -1,0 +1,32 @@
+Return-Path: <alerts@hdfcbank.net>
+Received: from mailout.hdfcbank.net (mailout.hdfcbank.net [202.140.41.10]) by mx.example-recipient.in; Sun, 1 Nov 2026 07:30:02 +0530
+Authentication-Results: mx.example-recipient.in; spf=pass smtp.mailfrom=hdfcbank.net; dkim=pass header.d=hdfcbank.net; dmarc=pass header.from=hdfcbank.net
+From: "HDFC Bank InstaAlerts" <alerts@hdfcbank.net>
+To: nived@example-recipient.in
+Subject: Your HDFC Bank account statement for October 2026
+Date: Sun, 1 Nov 2026 07:30:00 +0530
+Message-ID: <stmt.oct2026.88231@hdfcbank.net>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="==mix_42b1d0=="
+
+--==mix_42b1d0==
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><body style=3D"font-family:Arial">
+<p>Dear Nived NS,</p>
+<p>Your account statement for October 2026 for account ending XX4421 is att=
+ached. The PDF is protected with your customer ID.</p>
+<p>View your transactions any time on <a href=3D"https://netbanking.hdfcban=
+k.com">netbanking.hdfcbank.com</a>.</p>
+<p>HDFC Bank will never ask for your password, OTP or card details over ema=
+il or phone. Do not share them with anyone.</p>
+<p>Warm regards,<br>HDFC Bank</p>
+</body></html>
+--==mix_42b1d0==
+Content-Type: application/pdf; name="Statement_Oct2026_XX4421.pdf"
+Content-Disposition: attachment; filename="Statement_Oct2026_XX4421.pdf"
+Content-Transfer-Encoding: base64
+
+JVBERi0xLjQKJSBzYW1wbGUgc3RhdGVtZW50IHBsYWNlaG9sZGVyCiUlRU9GCg==
+--==mix_42b1d0==--

@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phishcheck"
+version = "1.0.0"
+description = "Offline phishing email analyzer: risk score with plain-English reasons."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Nived NS" }]
+requires-python = ">=3.9"
+dependencies = []
+keywords = ["phishing", "email", "security", "cybersecurity", "it-support"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Communications :: Email",
+    "Topic :: Security",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+phishcheck = "phishcheck.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+phishcheck = ["data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

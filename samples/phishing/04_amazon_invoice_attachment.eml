@@ -1,0 +1,32 @@
+Return-Path: <billing@amazon-invoices.net>
+Received: from mail.amazon-invoices.net (mail.amazon-invoices.net [91.92.248.77]) by mx.example-recipient.in; Mon, 2 Nov 2026 14:22:19 +0530
+Authentication-Results: mx.example-recipient.in; spf=pass smtp.mailfrom=amazon-invoices.net; dkim=none; dmarc=fail header.from=amazon.in
+From: "Amazon.in" <order-update@amazon.in>
+Reply-To: refunds@amazon-invoices.net
+To: customer@example-recipient.in
+Subject: Your order #405-8812730-1129 could not be delivered
+Date: Mon, 2 Nov 2026 14:22:10 +0530
+Message-ID: <8812730.1129@amazon-invoices.net>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="==mix_42b1d0=="
+
+--==mix_42b1d0==
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Hello,
+
+We were unable to deliver your order #405-8812730-1129. Your parcel is on hold at our warehouse.
+Please open the attached invoice and confirm your address within 48 hours, otherwise the order will be cancelled and the refund amount forfeited.
+
+Amazon.in Customer Service
+
+--==mix_42b1d0==
+Content-Type: application/octet-stream; name="Amazon_Invoice_8812730.pdf.exe"
+Content-Disposition: attachment; filename="Amazon_Invoice_8812730.pdf.exe"
+Content-Transfer-Encoding: base64
+
+TVqQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAFRoaXMgcHJvZ3JhbSBjYW5ub3QgYmUgcnVuIGluIERPUyBtb2RlIChzYW1wbGUgc3R1
+Yiwgbm90IHJlYWwgbWFsd2FyZSk=
+--==mix_42b1d0==--

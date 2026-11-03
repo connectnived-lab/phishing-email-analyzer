@@ -1,0 +1,27 @@
+Return-Path: <bounces+1234567@em.github.com>
+Received: from mx.example-recipient.in (mx.example-recipient.in [203.0.113.10]) by inbox.example-recipient.in; Mon, 2 Nov 2026 11:02:31 +0530
+Received: from o1.em.github.com (o1.em.github.com [192.254.112.98]) by mx.example-recipient.in with ESMTPS; Mon, 2 Nov 2026 11:02:30 +0530
+Authentication-Results: mx.example-recipient.in; spf=pass smtp.mailfrom=em.github.com; dkim=pass header.d=github.com; dmarc=pass header.from=github.com
+From: "GitHub" <noreply@github.com>
+To: nived@example-recipient.in
+Subject: [GitHub] A new SSH key was added to your account
+Date: Mon, 2 Nov 2026 11:02:28 +0530
+Message-ID: <abc123.ssh-key-added@github.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Hey nived-ns!
+
+The following SSH key was added to your account:
+
+    Laptop-2026
+    SHA256:2kq3V0n8o6fKX0s5bE1eTq7d0p0qNfzYb2QnZq3uE1c
+
+If you believe this key was added in error, you can remove the key and disable access at the following location:
+
+https://github.com/settings/keys
+
+Thanks,
+The GitHub Team
+

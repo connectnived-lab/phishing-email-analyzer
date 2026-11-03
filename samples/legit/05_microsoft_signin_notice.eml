@@ -1,0 +1,25 @@
+Return-Path: <msonlineservicesteam@microsoftonline.com>
+Received: from mail-bn8nam12.outbound.protection.outlook.com (mail-bn8nam12.outbound.protection.outlook.com [40.107.237.40]) by mx.contoso-retail.in; Tue, 3 Nov 2026 07:12:44 +0530
+Authentication-Results: mx.contoso-retail.in; spf=pass smtp.mailfrom=microsoftonline.com; dkim=pass header.d=microsoft.com; dmarc=pass header.from=accountprotection.microsoft.com
+From: "Microsoft account team" <account-security-noreply@accountprotection.microsoft.com>
+To: it.support@contoso-retail.in
+Subject: Microsoft account security info was added
+Date: Tue, 3 Nov 2026 07:12:40 +0530
+Message-ID: <SN6PR.secinfo.2231@accountprotection.microsoft.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Microsoft account
+
+Security info was added
+
+The following security info was recently added to the Microsoft account it****@contoso-retail.in:
+Authenticator app
+
+If this was you, you can safely ignore this email.
+If this wasn't you, review your security info at https://account.live.com/proofs/manage
+
+Thanks,
+The Microsoft account team
+

@@ -1,0 +1,22 @@
+Return-Path: <20261102083011abc@bounces.amazon.in>
+Received: from a27-11.smtp-out.amazonses.com (a27-11.smtp-out.amazonses.com [54.240.27.11]) by mx.example-recipient.in; Mon, 2 Nov 2026 08:30:15 +0530
+Authentication-Results: mx.example-recipient.in; spf=pass smtp.mailfrom=bounces.amazon.in; dkim=pass header.d=amazon.in; dmarc=pass header.from=amazon.in
+From: "Amazon.in" <shipment-tracking@amazon.in>
+To: nived@example-recipient.in
+Subject: Your Amazon.in order #171-5521093-7781 has shipped
+Date: Mon, 2 Nov 2026 08:30:11 +0530
+Message-ID: <0109018a7c.shipment@email.amazonses.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><body style=3D"font-family:Arial">
+<p>Hello Nived,</p>
+<p>Your package with <b>Logitech MK270 Wireless Keyboard and Mouse</b> has =
+shipped and will arrive Wednesday, 4 November.</p>
+<p><a href=3D"https://www.amazon.in/gp/css/order-history?ref=3Dship_track">=
+Track your package</a></p>
+<p>You can view or change your order in <a href=3D"https://www.amazon.in/yo=
+ur-orders">Your Orders</a>.</p>
+<p>Thank you for shopping with us.<br>Amazon.in</p>
+</body></html>

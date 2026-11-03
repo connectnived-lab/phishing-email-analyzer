@@ -1,0 +1,38 @@
+Return-Path: <hr-payroll@hr-payroll-portal.com>
+Received: from smtp.hr-payroll-portal.com (smtp.hr-payroll-portal.com [5.188.86.12]) by mx.example-recipient.in; Mon, 2 Nov 2026 10:30:11 +0530
+Authentication-Results: mx.example-recipient.in; spf=pass smtp.mailfrom=hr-payroll-portal.com; dkim=pass header.d=hr-payroll-portal.com; dmarc=pass header.from=hr-payroll-portal.com
+From: "HR Payroll" <hr-payroll@hr-payroll-portal.com>
+Reply-To: payroll.dept2026@outlook.com
+To: staff@example-recipient.in
+Subject: Salary Revision 2026 - confidential
+Date: Mon, 2 Nov 2026 10:30:00 +0530
+Message-ID: <rev2026.551@hr-payroll-portal.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="==mix_42b1d0=="
+
+--==mix_42b1d0==
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Hi,
+
+Please find attached your revised salary structure for 2026. The file is protected; click "Enable Content" after opening to view your figures.
+
+Kindly confirm before end of day. This is urgent.
+
+HR & Payroll
+
+--==mix_42b1d0==
+Content-Type: application/vnd.ms-excel.sheet.macroEnabled.12; name="Salary_Revision_2026.xlsm"
+Content-Disposition: attachment; filename="Salary_Revision_2026.xlsm"
+Content-Transfer-Encoding: base64
+
+UEsDBBQAAAAAANBLY13HHBc8CAAAAAgAAAATAAAAW0NvbnRlbnRfVHlwZXNdLnhtbDxUeXBlcy8+
+UEsDBBQAAAAAANBLY13OnpgTCwAAAAsAAAAPAAAAeGwvd29ya2Jvb2sueG1sPHdvcmtib29rLz5Q
+SwMEFAAAAAAA0EtjXVYpqIRDAAAAQwAAABEAAAB4bC92YmFQcm9qZWN0LmJpbkF0dHJpYnV0ZSBW
+Ql9OYW1lID0gIk1vZHVsZTEiICcgaGFybWxlc3Mgc2FtcGxlLCBubyByZWFsIG1hY3JvIGNvZGVQ
+SwECFAMUAAAAAADQS2NdxxwXPAgAAAAIAAAAEwAAAAAAAAAAAAAAgAEAAAAAW0NvbnRlbnRfVHlw
+ZXNdLnhtbFBLAQIUAxQAAAAAANBLY13OnpgTCwAAAAsAAAAPAAAAAAAAAAAAAACAATkAAAB4bC93
+b3JrYm9vay54bWxQSwECFAMUAAAAAADQS2NdVimohEMAAABDAAAAEQAAAAAAAAAAAAAAgAFxAAAA
+eGwvdmJhUHJvamVjdC5iaW5QSwUGAAAAAAMAAwC9AAAA4wAAAAAA
+--==mix_42b1d0==--

