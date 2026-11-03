@@ -9,7 +9,7 @@ description = "Offline phishing email analyzer: risk score with plain-English re
 readme = "README.md"
 license = { text = "MIT" }
 authors = [{ name = "Nived NS" }]
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 dependencies = []
 keywords = ["phishing", "email", "security", "cybersecurity", "it-support"]
 classifiers = [

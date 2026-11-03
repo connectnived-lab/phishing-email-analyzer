@@ -1,7 +1,7 @@
 # PhishCheck – Phishing Email Analyzer
 
 [![Live demo](https://img.shields.io/badge/live%20demo-nived--phishcheck.sites.tab.bot-1d4ed8)](https://nived-phishcheck.sites.tab.bot/)
-![Python](https://img.shields.io/badge/python-3.9%2B-3776ab)
+![Python](https://img.shields.io/badge/python-3.10%2B-3776ab)
 ![Dependencies](https://img.shields.io/badge/dependencies-none-brightgreen)
 ![Tests](https://img.shields.io/badge/tests-pytest-0a9edc)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
