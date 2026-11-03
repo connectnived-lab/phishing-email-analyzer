@@ -3,14 +3,35 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PhishCheck – Phishing Email Analyzer</title>
-  <meta name="description" content="Paste a raw email or upload a .eml file and get a phishing risk score with plain-English reasons. Runs entirely in your browser.">
-  <meta property="og:title" content="PhishCheck – Phishing Email Analyzer">
-  <meta property="og:description" content="Risk score 0–100 with clear reasons: spoofed senders, fake links, scam wording, dangerous attachments. Nothing leaves your browser.">
+  <title>PhishCheck – Free Phishing Email Checker &amp; Analyzer (Is this email a scam?)</title>
+  <meta name="description" content="Is this email phishing? Paste the raw email or upload a .eml file and get a 0–100 risk score with plain-English reasons: spoofed senders, SPF/DKIM/DMARC, fake links, scam wording, dangerous attachments. Free, runs in your browser, nothing is uploaded.">
+  <meta name="keywords" content="phishing email checker, is this email phishing, email header analyzer, phishing link checker, eml analyzer, SPF DKIM DMARC check, scam email check, phishing detection tool, KYC scam email">
+  <meta name="author" content="Nived NS">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://nived-phishcheck.sites.tab.bot/">
+  <meta name="theme-color" content="#1d4ed8">
   <meta property="og:type" content="website">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+  <meta property="og:site_name" content="PhishCheck">
+  <meta property="og:title" content="PhishCheck – Is this email phishing?">
+  <meta property="og:description" content="Risk score 0–100 with clear reasons: spoofed senders, fake links, scam wording, dangerous attachments. Nothing leaves your browser.">
+  <meta property="og:url" content="https://nived-phishcheck.sites.tab.bot/">
+  <meta property="og:image" content="https://nived-phishcheck.sites.tab.bot/share-card.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PhishCheck: a phishing risk gauge at 87 out of 100 with the reasons listed">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PhishCheck – Is this email phishing?">
+  <meta name="twitter:description" content="Paste an email, get a phishing risk score with plain-English reasons. Free, private.">
+  <meta name="twitter:image" content="https://nived-phishcheck.sites.tab.bot/share-card.png">
+  <!-- GOOGLE-SITE-VERIFICATION-SLOT: replace this comment with the meta tag from Search Console -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"PhishCheck","alternateName":"Phishing Email Analyzer","url":"https://nived-phishcheck.sites.tab.bot/","description":"Rules-based phishing email analyzer: paste a raw email or upload a .eml file to get a 0-100 risk score with reasons covering sender spoofing, SPF/DKIM/DMARC, links, wording and attachments. Runs in the browser.","applicationCategory":"SecurityApplication","operatingSystem":"Any (web browser)","inLanguage":"en","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"image":"https://nived-phishcheck.sites.tab.bot/share-card.png","author":{"@type":"Person","name":"Nived NS","url":"https://nived.sites.tab.bot/","sameAs":["https://github.com/connectnived-lab","https://www.linkedin.com/in/nivedns"]}}
+  </script>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src https://nived-stats.sites.tab.bot; form-action 'none'; base-uri 'none'">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d4ed8'/%3E%3Cpath d='M14 22h36v22H14z' fill='none' stroke='white' stroke-width='4'/%3E%3Cpath d='M14 22l18 13 18-13' fill='none' stroke='white' stroke-width='4'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="css/style.css?v=1">
+  <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 <body>
   <header class="topbar">
@@ -22,7 +43,7 @@
           <p>Phishing Email Analyzer</p>
         </div>
       </div>
-      <span class="privacy-pill" title="All analysis runs in JavaScript on this page. No network requests are made with your email.">
+      <span class="privacy-pill" title="All analysis runs in JavaScript on this page. Your email is never sent anywhere; only an anonymous visit count is kept.">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3z"/></svg>
         Runs in your browser · nothing is uploaded
       </span>
@@ -112,14 +133,31 @@ You can also drop a .eml file onto this box."></textarea>
     <p class="how-note">Each warning adds points. The total (capped at 100) gives the verdict. This is a teaching and triage aid: a low score does not prove an email is safe, so when in doubt, ask your IT team.</p>
   </section>
 
+  <section class="wrap card share-card" aria-labelledby="share-h">
+    <h2 id="share-h">Share PhishCheck</h2>
+    <p>Know someone who gets "your account will be suspended" emails? Send them this.</p>
+    <div class="share-row">
+      <a class="btn btn-wa" id="share-wa" target="_blank" rel="noopener noreferrer" href="https://wa.me/?text=PhishCheck%20%E2%80%93%20is%20this%20email%20phishing%3F%20Free%20checker%3A%20https%3A%2F%2Fnived-phishcheck.sites.tab.bot%2F%3Futm_source%3Dshare-whatsapp">Share on WhatsApp</a>
+      <button class="btn btn-ghost" id="share-native" type="button" hidden>Share…</button>
+      <button class="btn btn-ghost" id="share-copy" type="button">Copy link</button>
+    </div>
+    <p class="how-note">Privacy: your email is analysed only inside this page and never sent anywhere. We count anonymous visits and analyses (no cookies, no IP addresses, no personal data).</p>
+  </section>
+  <div class="wrap"><section class="card more-tools" aria-labelledby="more-h">
+      <h2 id="more-h">More free tools by Nived NS</h2>
+      <ul><li><a href="https://scam-aano.sites.tab.bot/?utm_source=nived-sites&amp;utm_campaign=nived-phishcheck"><span aria-hidden="true">🛡️</span> <strong>Scam Aano? · സ്കാം ആണോ?</strong> <span>WhatsApp/SMS scam checker</span></a></li><li><a href="https://kseb-bill.sites.tab.bot/?utm_source=nived-sites&amp;utm_campaign=nived-phishcheck"><span aria-hidden="true">⚡</span> <strong>KSEB Bill Calculator</strong> <span>കറന്റ് ബിൽ കണക്കാക്കാം</span></a></li><li><a href="https://pc-doctor.sites.tab.bot/?utm_source=nived-sites&amp;utm_campaign=nived-phishcheck"><span aria-hidden="true">🩺</span> <strong>PC Doctor</strong> <span>PC / phone problems, step-by-step fixes</span></a></li><li><a href="https://nived-motion-lab.sites.tab.bot/?utm_source=nived-sites&amp;utm_campaign=nived-phishcheck"><span aria-hidden="true">✋</span> <strong>Motion Lab</strong> <span>Hand & eye tracking in the browser</span></a></li></ul>
+      <p><a href="https://nived.sites.tab.bot/">Portfolio</a> · <a href="https://github.com/connectnived-lab">GitHub</a> · <a href="https://www.linkedin.com/in/nivedns">LinkedIn</a></p>
+    </section></div>
+
   <footer class="wrap footer">
     <span>Built by Nived NS · MIT licence</span>
     <span id="repo-link"></span>
   </footer>
 
-  <script src="js/rules.js?v=1"></script>
-  <script src="js/samples.js?v=1"></script>
-  <script src="js/analyzer.js?v=1"></script>
-  <script src="js/app.js?v=1"></script>
+  <script src="js/count.js?v=2"></script>
+  <script src="js/rules.js?v=2"></script>
+  <script src="js/samples.js?v=2"></script>
+  <script src="js/analyzer.js?v=2"></script>
+  <script src="js/app.js?v=2"></script>
 </body>
 </html>

@@ -100,14 +100,25 @@
     });
   }
 
+  // Anonymous count (js/count.js): only the event name and the verdict word, never the email.
+  var fromSample = false;
+  function countAnalysis(report) {
+    if (!fromSample && window.nivedCount) window.nivedCount("analyze", { v: { Safe: "safe", Suspicious: "suspicious", Phishing: "phishing" }[report.verdict] });
+    fromSample = false;
+  }
+
   function analyzeText() {
     var text = input.value;
     if (!text.trim()) { input.focus(); return; }
-    render(PhishCheck.analyzeText(text));
+    var report = PhishCheck.analyzeText(text);
+    render(report);
+    countAnalysis(report);
   }
 
   function analyzeBinary(binary) {
-    render(PhishCheck.analyze(binary));
+    var report = PhishCheck.analyze(binary);
+    render(report);
+    countAnalysis(report);
   }
 
   function readFile(file) {
@@ -136,6 +147,7 @@
         input.value = sample.raw;
         clearActive();
         chip.classList.add("active");
+        fromSample = true;
         analyzeText();
         if (window.innerWidth < 900) $("result").scrollIntoView({ behavior: "smooth", block: "start" });
       });
@@ -167,6 +179,23 @@
     $("repo-link").appendChild(a);
   } else {
     $("repo-link").textContent = "Python CLI + browser demo, same rules";
+  }
+
+  // Share buttons
+  var SITE_URL = "https://nived-phishcheck.sites.tab.bot/";
+  var hit = function (ev) { if (window.nivedCount) window.nivedCount(ev); };
+  $("share-wa").addEventListener("click", function () { hit("share_wa"); });
+  $("share-copy").addEventListener("click", function () {
+    hit("share_copy");
+    var btn = $("share-copy"), url = SITE_URL + "?utm_source=share-copy";
+    var done = function () { btn.textContent = "Copied ✓"; setTimeout(function () { btn.textContent = "Copy link"; }, 1800); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, function () { window.prompt("", url); }); else window.prompt("", url);
+  });
+  if (navigator.share) {
+    $("share-native").hidden = false;
+    $("share-native").addEventListener("click", function () {
+      navigator.share({ title: "PhishCheck", text: "Is this email phishing? Free checker, runs in your browser:", url: SITE_URL + "?utm_source=share-native" }).then(function () { hit("share_native"); }, function () {});
+    });
   }
 
   buildSamples();

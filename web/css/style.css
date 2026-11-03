@@ -146,3 +146,17 @@ textarea.dragging { border-color: var(--brand); background: #eef4ff; }
   .gauge { width: 180px; margin: 0 auto; }
   .facts { grid-template-columns: 104px minmax(0, 1fr); font-size: .82rem; }
 }
+
+/* share + more tools */
+.share-card { margin-top: 18px; }
+.share-card h2, .more-tools h2 { font-size: 1.1rem; margin: 0 0 6px; }
+.share-card p { color: var(--muted, #5b6474); margin: 0 0 10px; }
+.share-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.share-row .btn { flex: 1 1 140px; text-align: center; text-decoration: none; padding: 11px 14px; font-weight: 600; }
+.btn-wa { background: #1fa855; color: #fff; flex-basis: 100% !important; font-size: 1rem; }
+.btn-wa:hover { background: #17924a; }
+.more-tools { margin-top: 18px; }
+.more-tools ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.more-tools li a { display: block; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; color: var(--ink); text-decoration: none; }
+.more-tools li a span:last-child { display: block; color: var(--muted, #5b6474); font-size: .88rem; }
+.more-tools p a, .footer a { color: var(--brand); }
